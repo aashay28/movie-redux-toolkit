@@ -8,9 +8,11 @@ import {
 } from "../../features/movies/movieSlice";
 const Home = () => {
   const dispatch = useDispatch();
+  const movietext = "Harry";
+  const showtext = "Friends";
   useEffect(() => {
-    dispatch(fetchAsyncMovies());
-    dispatch(fetchAsyncShows());
+    dispatch(fetchAsyncMovies(movietext));
+    dispatch(fetchAsyncShows(showtext));
   }, [dispatch]);
   return (
     <div>
